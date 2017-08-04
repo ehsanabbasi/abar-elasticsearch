@@ -8,7 +8,3 @@ discovery.zen.ping.unicast.hosts: ["${ES_DISCOVERY_HOST}"]
 # set to 1 to allow single node clusters
 # Details: https://github.com/elastic/elasticsearch/pull/17288
 discovery.zen.minimum_master_nodes: 1
-
-processors: ${ES_PROCESSORS:1}
-thread_pool.bulk.size: ${THREAD_POOL_BULK_SIZE:20}
-thread_pool.bulk.queue_size: ${THREAD_POOL_BULK_QUEUE_SIZE:1000}
