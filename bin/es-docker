@@ -4,8 +4,8 @@ if [ -n "$ES_JAVA_OPTS" ]; then
     echo "Updating config/jvm.options with $ES_JAVA_OPTS"
     java_opts=($ES_JAVA_OPTS)
     # The order doesn't matter as the whole line is replaced
-    sed -i '.a' "s/^-Xms.*/${java_opts[0]}/g" ../config/jvm.options
-    sed -i '.a' "s/^-Xmx.*/${java_opts[1]}/g" ../config/jvm.options
+    sed -i "s/^-Xms.*/${java_opts[0]}/g" ../config/jvm.options
+    sed -i "s/^-Xmx.*/${java_opts[1]}/g" ../config/jvm.options
 fi
 
 # Run Elasticsearch and allow setting default settings via env vars
