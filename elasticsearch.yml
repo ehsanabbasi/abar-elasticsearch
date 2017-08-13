@@ -10,3 +10,5 @@ discovery.zen.ping.unicast.hosts: ["${ES_DISCOVERY_HOST}"]
 discovery.zen.minimum_master_nodes: ${MINIMUM_MASTER_NODES:1}
 
 xpack.security.authc.accept_default_password: ${ACCEPT_DEFAULT_PASSWORD:true}
+
+xpack.monitoring.history.duration: ${MONITORING_HISTORY_DURATION:2d}
