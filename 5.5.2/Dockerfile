@@ -9,11 +9,11 @@ RUN yum update -y && yum install -y java-1.8.0-openjdk-headless wget which && yu
 WORKDIR /usr/share/elasticsearch
 
 # Download and extract defined ES version. busybox tar can't strip leading dir.
-RUN wget --progress=bar:force https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.5.1.tar.gz && \
-    tar zxf elasticsearch-5.5.1.tar.gz && \
-    mv elasticsearch-5.5.1/* . && \
-    rmdir elasticsearch-5.5.1 && \
-    rm elasticsearch-5.5.1.tar.gz
+RUN wget --progress=bar:force https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.5.2.tar.gz && \
+    tar zxf elasticsearch-5.5.2.tar.gz && \
+    mv elasticsearch-5.5.2/* . && \
+    rmdir elasticsearch-5.5.2 && \
+    rm elasticsearch-5.5.2.tar.gz
 
 RUN set -ex && for esdirs in config data logs; do \
         mkdir -p "$esdirs"; \
