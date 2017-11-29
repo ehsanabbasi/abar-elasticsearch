@@ -1,7 +1,7 @@
 NAME = library/elasticsearch-clustered
 REGISTRY = registry.abarcloud.com
 MAJOR_VERSION = 5
-MINOR_VERSION = 5.5.2
+MINOR_VERSION = 5.6.3
 
 .PHONY: all build tag release
 
