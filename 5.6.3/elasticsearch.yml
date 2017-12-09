@@ -9,4 +9,3 @@ discovery.zen.ping.unicast.hosts: ["${ES_DISCOVERY_HOST}"]
 # Details: https://github.com/elastic/elasticsearch/pull/17288
 discovery.zen.minimum_master_nodes: ${MINIMUM_MASTER_NODES:1}
 
-xpack.monitoring.history.duration: ${MONITORING_HISTORY_DURATION:1d}
