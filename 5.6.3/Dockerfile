@@ -20,7 +20,7 @@ RUN set -ex && for esdirs in config data logs; do \
     done
 
 # Install x-pack and also the ingest-{agent,geoip} modules required for Filebeat
-RUN for PLUGIN in x-pack ingest-user-agent ingest-geoip; do \
+RUN for PLUGIN in ingest-user-agent ingest-geoip; do \
       elasticsearch-plugin install --batch "$PLUGIN"; \
     done
 COPY elasticsearch.yml log4j2.properties config/
